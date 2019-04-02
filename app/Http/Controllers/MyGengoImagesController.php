@@ -20,7 +20,7 @@ class MyGengoImagesController extends Controller
     
     public function create()
     {
-        $myGengoImage = new MyGengoImage;
+        $myGengoImage = new myGengoImage;
         
         return view('mygengo.create',[
             'myGengoImage' => $myGengoImage,
@@ -29,21 +29,23 @@ class MyGengoImagesController extends Controller
     
     public function store(Request $request)
     {
+        $myGengoImage = new myGengoImage;
+        
         $this->validate($request,[
             'text' => 'required|max:191',
             ]);
             
-        $backImg = public_path('back/backImg.jpg');
+        $backImg = public_path('storage/back/backImg.jpg');
         $inToImg = $request->text;
         
         $createdImg = Image::make($backImg)->text($inToImg, 0, 0, function($font) {
             $font->file('fonts/SawarabiGothic-Regular.ttf');
-            $font->size(18);
+            $font->size(100);
             $font->align('center');
             $font->color('#ffffff');
         });
         
-        $path = $createdImg->save(public_path('createdImg'));
+        $path = $createdImg->save(public_path('storage/createdImg/') . 'myGengoImage' . $myGengoImage->id . '.jpg');
         
         return view('mygengo.complete',[
             'createdImg' => $path,
