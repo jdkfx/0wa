@@ -10,7 +10,7 @@
     @if(count($myGengoImages) > 0)
         <ul>
         @foreach($myGengoImages as $myGengoImage)
-            <li>{{ $myGengoImage->newGengo }}</li>
+            <li><img src="{{ $myGengoImage->createdImg }}" alt="" width="400px"></li>
         @endforeach
         </ul>
     @endif

@@ -15,7 +15,6 @@ class CreateMyGengoImagesTable extends Migration
     {
         Schema::create('myGengoImages', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('text');
             $table->string('createdImg');
             $table->timestamps();
         });
