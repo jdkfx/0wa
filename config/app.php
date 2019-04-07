@@ -166,6 +166,7 @@ return [
         
         Collective\Html\HtmlServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        App\Providers\ValidationServiceProvider::class,
         
         /*
          * Package Service Providers...

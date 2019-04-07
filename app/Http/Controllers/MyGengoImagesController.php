@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Intervention\Image\ImageManagerStatic as Image;
 use App\myGengoImage;
 use Carbon\Carbon;
+use App\Http\Requests\CreateMyGengoImageRequest;
 
 class MyGengoImagesController extends Controller
 {
@@ -28,13 +29,9 @@ class MyGengoImagesController extends Controller
             ]);
     }
     
-    public function store(Request $request)
+    public function store(CreateMyGengoImageRequest $request)
     {
         $myGengoImage = new myGengoImage;
-        
-        $this->validate($request,[
-            'text' => 'required|max:4',
-            ]);
         
         $inToImg = $request->text;
         $createdImg = $this->change_per_strlen($inToImg);
