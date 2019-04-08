@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+/*全体のデザイン*/
+
+body {
+    background-color:#fef4f4;
+    font-family:'sans-serif';
+    margin-top:100px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*トップ画面のデザイン*/
+
+.generator {
+    width:600px;
+    margin:0 auto;
+    margin-bottom:200px;
+}
+
+.generator>h2,h3,p {
+    text-align:center;
+}
+
+.generator>.img>img {
+    width:100%;
+    border-radius:5px;
+    margin:30px 0;
+}
+
+.generator>a {
+    width:200px;
+    padding:10px 0;
+    background-color:#fdeff2;
+    display:block;
+    text-align:center;
+    margin:0 auto;
+    border-radius:3px;
+    text-decoration: none;
+    border:solid 2px #f0908d;
+    color:#f0908d;
+    font-size:20px;
+    margin-top:40px;
+}
+
+.contents {
+    width:600px;
+    margin:0 auto;
+    margin-bottom:200px;
+}
+
+.contents>ul {
+    padding-left:0;
+}
+
+.contents>ul>li>img {
+    width:100%;
+    border-radius:5px;
+    margin:30px 0;
+}
+
+/*フォームのデザイン*/
+
+.generator-form {
+    width:600px;
+    margin:0 auto;
+    margin-bottom:200px;
+}
+
+.generator-form>.img>img {
+    width:100%;
+    border-radius:5px;
+    margin:30px 0;
+}
+
+.generator-form>h2,p {
+    text-align:center;
+}
+
+.generator-form>form {
+    text-align:center;
+}
+
+.generator-form>form>label {
+    display:block;
+    font-size:20px;
+}
+
+.generator-form>form>.form-input {
+    display:block;
+    text-align:center;
+    margin:20px auto;
+    border:0;
+    padding:10px 0;
+    border:solid 1px #ccc;
+    width:100%;
+    border-radius:3px;
+}
+
+.generator-form>form>.form-button {
+    width:200px;
+    padding:10px 0;
+    background-color:#fdeff2;
+    display:block;
+    text-align:center;
+    margin:0 auto;
+    border-radius:3px;
+    text-decoration: none;
+    border:solid 2px #f0908d;
+    color:#f0908d;
+    font-size:20px;
+    margin-top:40px;
+}
+
+/*完成画面のデザイン*/
+
+.complete{
+    width:600px;
+    margin:0 auto;
+    margin-bottom:200px;
+    text-align:center;
+}
+
+.complete>.img>img {
+    width:100%;
+    border-radius:5px;
+    margin:30px 0;
+}
+
+.complete>a {
+    width:200px;
+    padding:10px 0;
+    background-color:#fdeff2;
+    display:block;
+    text-align:center;
+    margin:0 auto;
+    border-radius:3px;
+    text-decoration: none;
+    border:solid 2px #f0908d;
+    color:#f0908d;
+    font-size:20px;
+    margin-top:40px;
+}
+
+footer {
+    text-align:center;
+}

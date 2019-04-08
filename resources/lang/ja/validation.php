@@ -41,7 +41,7 @@ return [
     'max'                  => [
         'numeric' => ':attributeは:max以下にしてください。',
         'file'    => ':attributeは:max KB以下のファイルにしてください。.',
-        'string'  => ':attributeは:max文字以下にしてください。',
+        'string'  => '🙅:attributeは:max文字以下にしてください🙅',
         'array'   => ':attributeは:max個以下にしてください。',
     ],
     'mimes'                => ':attributeは:valuesタイプのファイルにしてください。',

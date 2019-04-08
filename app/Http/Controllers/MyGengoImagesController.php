@@ -13,7 +13,7 @@ class MyGengoImagesController extends Controller
 {
     public function index()
     {
-        $myGengoImages = myGengoImage::all();
+        $myGengoImages = myGengoImage::latest()->paginate(10);
         
         return view('mygengo.index',[
             'myGengoImages' => $myGengoImages,
