@@ -8,7 +8,7 @@
         <p>フォントの都合で文字が出なかったらごめんね💛</p>
         
         <div class="img">
-            <img src="/storage/back/backImg.jpg" alt="">
+            <img src="/storage/back/backimg.jpg" alt="">
         </div>
     
         {!! Form::model($myGengoImage, ['route' => 'myGengoImages.store']) !!}

@@ -52,7 +52,7 @@ class MyGengoImagesController extends Controller
     // 最大は四文字
     public function change_per_strlen($inToImg){
         $strlen = mb_strlen($inToImg);
-        $backImg = public_path().'/storage/back/backImg.jpg';
+        $backImg = public_path().'/storage/back/backimg.jpg';
         
         switch($strlen){
             case 1:
