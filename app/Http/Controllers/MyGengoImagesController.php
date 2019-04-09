@@ -36,10 +36,10 @@ class MyGengoImagesController extends Controller
         $inToImg = $request->text;
         $createdImg = $this->change_per_strlen($inToImg);
         
-        $timestamp = Carbon::now()->timestamp;
-        $createdImg->save(public_path() . '/storage/createdImg/'. $timestamp . '.jpg');
+        $filename = \Illuminate\Support\Str::random(40);
+        $createdImg->save(public_path() . '/storage/createdImg/'. $filename . '.jpg');
         
-        $myGengoImage->createdImg = '/storage/createdImg/' . $timestamp . '.jpg';
+        $myGengoImage->createdImg = '/storage/createdImg/' . $filename . '.jpg';
         $myGengoImage->save();
         
         return view('mygengo.complete',[
