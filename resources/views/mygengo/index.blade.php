@@ -7,7 +7,7 @@
         <p>フォントの都合で文字が出なかったらごめんね💛</p>
         
         <div class="img">
-            <img src="/storage/app/public/back/backimg.jpg" alt="">
+            <img src="/storage/backimg.jpg" alt="">
         </div>
         
         <h3>〈元号を作成〉ボタンを押して作成してみよう！</h3>

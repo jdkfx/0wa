@@ -37,9 +37,9 @@ class MyGengoImagesController extends Controller
         $createdImg = $this->change_per_strlen($inToImg);
         
         $filename = \Illuminate\Support\Str::random(40);
-        $createdImg->save(public_path() . '/storage/createdImg/'. $filename . '.jpg');
+        $createdImg->save(public_path() . '/storage/'. $filename . '.jpg');
         
-        $myGengoImage->createdImg = '/storage/createdImg/' . $filename . '.jpg';
+        $myGengoImage->createdImg = '/storage/' . $filename . '.jpg';
         $myGengoImage->save();
         
         return view('mygengo.complete',[
@@ -52,7 +52,7 @@ class MyGengoImagesController extends Controller
     // 最大は四文字
     public function change_per_strlen($inToImg){
         $strlen = mb_strlen($inToImg);
-        $backImg = public_path().'/storage/back/backimg.jpg';
+        $backImg = public_path().'/storage/backimg.jpg';
         
         switch($strlen){
             case 1:
