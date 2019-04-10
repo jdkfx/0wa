@@ -11,5 +11,5 @@
 |
 */
 
-Route::get('/', 'MyGengoImagesController@index');
+// Route::get('/', 'MyGengoImagesController@index');
 Route::resource('myGengoImages', 'MyGengoImagesController');
