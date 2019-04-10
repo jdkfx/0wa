@@ -39,7 +39,7 @@ class MyGengoImagesController extends Controller
         $filename = \Illuminate\Support\Str::random(40);
         $createdImg->save(public_path() . '/' . $filename . '.jpg');
         
-        $myGengoImage->createdImg = '/' . $filename . '.jpg';
+        $myGengoImage->createdImg = public_path() . '/' . $filename . '.jpg';
         $myGengoImage->save();
         
         return view('mygengo.complete',[
