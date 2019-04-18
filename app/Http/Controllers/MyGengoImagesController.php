@@ -8,6 +8,8 @@ use Intervention\Image\ImageManagerStatic as Image;
 use App\myGengoImage;
 use Carbon\Carbon;
 use App\Http\Requests\CreateMyGengoImageRequest;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\File;
 
 class MyGengoImagesController extends Controller
 {
@@ -36,11 +38,15 @@ class MyGengoImagesController extends Controller
         $inToImg = $request->text;
         $createdImg = $this->change_per_strlen($inToImg);
         
-        $filename = \Illuminate\Support\Str::random(40);
-        $createdImg->save(public_path() . '/' . $filename . '.jpg');
+        $filename = \Illuminate\Support\Str::random(40) . '.jpg';
+        // $createdImg->save(public_path() . '/' . $filename);
         
-        $myGengoImage->createdImg = '/' . $filename . '.jpg';
+        $path = Storage::disk('s3')->put('/' . $filename, (string) $createdImg->encode());
+        
+        $myGengoImage->createdImg = $path;
         $myGengoImage->save();
+        
+        Storage::disk('local')->delete('public/' . $filename);
         
         return view('mygengo.complete',[
             'myGengoImage' => $myGengoImage,
