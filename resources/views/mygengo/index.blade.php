@@ -21,7 +21,7 @@
             @if(count($myGengoImages) > 0)
                 <ul>
                     @foreach($myGengoImages as $myGengoImage)
-                        <li><img src="{{ $myGengoImage->createdImg }}" alt=""></li>
+                        <li><img src="https://s3.amazonaws.com/mygengo-test/{{ $myGengoImage->createdImg }}" alt=""></li>
                     @endforeach
                 </ul>
             @endif
