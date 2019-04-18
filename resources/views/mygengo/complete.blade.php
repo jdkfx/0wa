@@ -7,7 +7,7 @@
         <p>フォントの都合で文字が出なかったらごめんね💛</p>
     
         <div class="img">
-            <img src="{{ $myGengoImage->createdImg }}" alt="">
+            <img src="https://s3.amazonaws.com/mygengo-test/{{ $myGengoImage->createdImg }}" alt="">
         </div>
         <p>オリジナルの元号ができました！</p>
     

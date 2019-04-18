@@ -41,9 +41,9 @@ class MyGengoImagesController extends Controller
         $filename = \Illuminate\Support\Str::random(40) . '.jpg';
         // $createdImg->save(public_path() . '/' . $filename);
         
-        $path = Storage::disk('s3')->put('/' . $filename, (string) $createdImg->encode());
+        Storage::disk('s3')->put('/' . $filename, (string) $createdImg->encode(), 'public');
         
-        $myGengoImage->createdImg = $path;
+        $myGengoImage->createdImg = $filename;
         $myGengoImage->save();
         
         Storage::disk('local')->delete('public/' . $filename);
